@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GTAHouse.ca | Greater Toronto Area Real Estate</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f7f4;--ink:#14263a;--mut:#4d5d6c;--card:#fff;--line:#d9dfe0;--teal:#1f6f78;--gold:#b9832f;--on:#fff;--hero:#14263a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a26;--ink:#eef2f3;--mut:#a8b6c2;--card:#16283a;--line:#27405a;--teal:#5fc0c9;--gold:#e0b062;--hero:#0a1520}}
+:root[data-theme="dark"]{--bg:#0e1a26;--ink:#eef2f3;--mut:#a8b6c2;--card:#16283a;--line:#27405a;--teal:#5fc0c9;--gold:#e0b062;--hero:#0a1520}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*,*:before,*:after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;margin:0 0 .5em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--hero);color:#fff}
+.bar{max-width:1100px;margin:auto;padding:0 20px;height:68px;display:flex;align-items:center;justify-content:space-between}
+.logo{font:700 24px Fraunces,Georgia,serif;text-decoration:none;color:#fff}.logo span{color:#e0b062}
+nav{display:flex;gap:6px;align-items:center}
+nav a,nav button{color:#fff;background:none;border:0;font:500 15px Inter,sans-serif;padding:10px 12px;text-decoration:none;cursor:pointer;border-radius:6px}
+nav a:hover,nav button:hover{background:rgba(255,255,255,.12)}
+.hero{background:var(--hero);color:#fff;padding:84px 20px 96px}
+.wrap{max-width:1100px;margin:auto}
+.hero h1{font-size:clamp(36px,6vw,64px);max-width:15ch}
+.hero p{max-width:52ch;font-size:19px;color:#c9d6de;margin:0 0 28px}
+.btn{display:inline-block;background:var(--gold);color:#14263a;font:600 16px Inter,sans-serif;padding:13px 22px;border-radius:8px;border:0;text-decoration:none;cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.btn.alt{background:none;color:#fff;border:1.5px solid #5d7387;margin-left:8px}
+section{padding:72px 20px}
+.sub{color:var(--mut);max-width:60ch;margin-bottom:36px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px;display:flex;flex-direction:column;align-items:flex-start}
+.card:nth-child(1){border-top:4px solid var(--teal)}.card:nth-child(2){border-top:4px solid var(--gold)}.card:nth-child(3){border-top:4px solid var(--ink)}
+.card h3{font-size:24px}.card p{color:var(--mut);flex:1}
+.card .btn{background:var(--ink);color:var(--bg)}
+form{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:760px}
+form .full{grid-column:1/-1}
+label{display:block;font-weight:600;font-size:15px;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:11px 12px}
+textarea{min-height:130px;resize:vertical}
+.hint{font-size:14px;color:var(--mut);margin:6px 0 0}
+.ok{display:none;background:var(--teal);color:#fff;padding:16px;border-radius:8px}
+footer{background:var(--hero);color:#a8b6c2;text-align:center;padding:28px 20px;font-size:15px}
+@media(max-width:700px){nav>a{display:none}form{grid-template-columns:1fr}.btn.alt{margin:10px 0 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="bar">
+<a class="logo" href="#top">GTA<span>House</span>.ca</a>
+<nav aria-label="Main">
+<a href="#alerts">Neighbourhood alerts</a><a href="#evaluation">Home evaluation</a><a href="#trends">Market trends</a>
+<a href="#contact">Contact</a>
+</nav></div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<h1>Know your neighbourhood before the market moves.</h1>
+<p>Daily updates, a free home evaluation and monthly market stats for the Greater Toronto Area, each delivered within 24 hours.</p>
+<a class="btn" href="#alerts">See what you get</a><a class="btn alt" href="#contact">Contact me</a>
+</div></div>
+
+<section id="offers"><div class="wrap">
+<h2>Three ways to stay ahead</h2>
+<p class="sub">Ask for any of them below. Each one arrives within 24 hours.</p>
+<div class="grid">
+<article class="card" id="alerts"><h3>Neighbourhood alerts</h3>
+<p>In 24 hrs, get a daily email with any update like new, sold or price change for a neighbourhood that you are targeting or live in.</p>
+<a class="btn" href="#contact" data-reg="Neighbourhood alert">Send me alert</a></article>
+<article class="card" id="evaluation"><h3>Free home evaluation</h3>
+<p>In 24 hrs, get a detailed home evaluation for your house with closest comparables.</p>
+<a class="btn" href="#contact" data-reg="Home Evaluation">Get me evaluation</a></article>
+<article class="card" id="trends"><h3>Market trends</h3>
+<p>In 24 hrs, get a monthly market update from the Toronto board with stats about market activity and trends.</p>
+<a class="btn" href="#contact" data-reg="Market reports">Send me stats</a></article>
+</div></div></section>
+
+<section id="contact"><div class="wrap">
+<h2>Contact me</h2>
+<p class="sub">Tell me what you need and I will reply with it. Fields marked * are required.</p>
+<form id="f" novalidate>
+<div><label for="fn">First name</label><input id="fn" name="fname" autocomplete="given-name"></div>
+<div><label for="ln">Last name</label><input id="ln" name="lname" autocomplete="family-name"></div>
+<div><label for="em">Email *</label><input id="em" name="email" type="email" required autocomplete="email"></div>
+<div><label for="ph">Phone</label><input id="ph" name="phone" type="tel" autocomplete="tel"></div>
+<div class="full"><label for="reg">Regarding *</label>
+<select id="reg" name="regarding" required>
+<option>General</option><option>Neighbourhood alert</option><option>Home Evaluation</option><option>Market reports</option>
+</select></div>
+<div class="full"><label for="msg">Message</label><textarea id="msg" name="message"></textarea><p class="hint" id="hint" aria-live="polite"></p></div>
+<div style="position:absolute;left:-9999px" aria-hidden="true"><input id="hp" name="website" tabindex="-1" autocomplete="off"></div>
+<div class="full"><label for="cap">Anti-spam check *</label><input id="cap" name="check" inputmode="numeric" autocomplete="off" required style="max-width:200px"><p class="hint" id="q" aria-live="polite"></p></div>
+<div class="full"><button class="btn" type="submit">Send message</button></div>
+<div class="full ok" id="ok" role="status">Thanks. Your request is in and I will reply within 24 hours.</div>
+</form></div></section>
+</main>
+
+<footer>&copy; <span id="yr"></span> GTAHouse.ca. All rights reserved.</footer>
+
+<script>
+var HINTS={
+"Market reports":"Please let me know if you are interested in Residential single family OR Multi-family OR Condominiums OR Commercial.",
+"Neighbourhood alert":"Please type your neighbourhood that you are interested in. If you can provide a big block of streets (north Eglinton, south Dundas, east Cawthra, west Mavis), this will be awesome.",
+"Home Evaluation":"Please type your complete address, your house features and upgrades."};
+var $=function(s){return document.querySelector(s)};
+$('#yr').textContent=new Date().getFullYear();
+var reg=$('#reg'),msg=$('#msg'),hint=$('#hint');
+function setReg(v){reg.value=v;updHint()}
+function updHint(){var h=HINTS[reg.value]||'';hint.textContent=h;msg.placeholder=h}
+reg.addEventListener('change',updHint);
+document.querySelectorAll('[data-reg]').forEach(function(a){a.addEventListener('click',function(){setReg(a.dataset.reg)})});
+
+var SCRIPT_URL='https://script.google.com/macros/s/AKfycbwQzXtbCPs6G9VWWmAXmZu9Tvpo1Q2zKlKrMLcXh6iOC5C2OIy15xzhf6yLhmOgT_970w/exec'; /* Google Apps Script web app URL */
+var A,B;function newQ(){A=2+Math.floor(Math.random()*8);B=2+Math.floor(Math.random()*8);$('#q').textContent='What is '+A+' + '+B+'? Type the answer.';$('#cap').value=''}
+newQ();
+$('#f').addEventListener('submit',function(e){
+ e.preventDefault();var em=$('#em');
+ if(parseInt($('#cap').value,10)!==A+B){$('#q').textContent='Wrong answer. Try this one: '+(function(){newQ();return A+' + '+B})()+' = ?';$('#cap').focus();return}
+ if(!em.value||!/^\S+@\S+\.\S+$/.test(em.value)){em.focus();em.style.borderColor='#c0392b';em.setCustomValidity('');alert('Enter a valid email address so I can reply.');return}
+ em.style.borderColor='';
+ var btn=e.target.querySelector('button[type=submit]'),ok=$('#ok');btn.disabled=true;btn.textContent='Sending...';
+ var p=new URLSearchParams({fname:$('#fn').value,lname:$('#ln').value,email:em.value,phone:$('#ph').value,regarding:reg.value,message:msg.value,website:$('#hp').value});
+ fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',body:p})
+ .then(function(){ok.style.background='';ok.textContent='Thanks. Your request is in and I will reply within 24 hours.';ok.style.display='block';e.target.reset();updHint();newQ()})
+ .catch(function(){ok.style.background='#c0392b';ok.textContent='Your message did not send. Please try again in a moment.';ok.style.display='block'})
+ .finally(function(){btn.disabled=false;btn.textContent='Send message'});
+});
+updHint();
+</script>
+</body>
+</html>
